@@ -685,3 +685,51 @@ main>section.q-page,main>section.s-page{padding-top:clamp(56px,7vw,104px)}
 .accueil-bt .pil-bleu,.accueil-bt .pil-contour{height:52px;padding:0 24px;font-size:16px}
 #accueil .hero-ill{max-height:64vh}
 @media (max-width:900px){#accueil .tete{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== v12 bénéfices ===== */
+.bn-duo{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.bn{display:grid;align-content:start;gap:22px;padding:clamp(28px,4vw,56px)}
+.bn h3{font-size:clamp(28px,2.8vw,42px);font-weight:500;letter-spacing:-.03em;line-height:1}
+.bn-proprio{background:var(--bleu);color:#fff}
+.bn-loc{background:var(--jaune);color:var(--noir)}
+.bn-ol{list-style:none;margin:0;padding:0;border-top:1.6px solid currentColor}
+.bn-ol li{display:grid;grid-template-columns:52px 1fr;gap:4px 12px;padding:16px 0;border-bottom:1.6px solid currentColor}
+.bn-proprio .bn-ol,.bn-proprio .bn-ol li{border-color:rgba(255,255,255,.5)}
+.bn-ol .bn-n{grid-row:span 2;font-size:28px;font-weight:500;letter-spacing:-.04em;line-height:1}
+.bn-proprio .bn-n{color:var(--jaune)}.bn-loc .bn-n{color:var(--bleu)}
+.bn-ol b{font-weight:500;font-size:clamp(18px,1.5vw,21px);letter-spacing:-.01em}
+.bn-ol .bn-t{font-size:15.5px;opacity:.88;max-width:42ch}
+.bn .pil-jaune,.bn .pil-bleu{justify-self:start;height:50px;padding:0 24px;font-size:16px}
+.pil-jaune{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font:500 15px/1 var(--texte);text-decoration:none;white-space:nowrap;background-color:var(--jaune);color:var(--noir);--rempli:#fff;background-image:linear-gradient(var(--rempli),var(--rempli));background-repeat:no-repeat;background-size:0% 100%;transition:background-size .45s cubic-bezier(.65,0,.35,1)}
+.pil-jaune:hover{background-size:100% 100%}
+.pil-jaune::after{content:"→";display:inline-block;max-width:0;opacity:0;overflow:hidden;transition:max-width .4s cubic-bezier(.65,0,.35,1),opacity .3s,margin .4s}
+.pil-jaune:hover::after{max-width:1.2em;opacity:1;margin-left:.35em}
+.bn-loc .pil-bleu{--rempli:var(--noir)}
+.bn-ligne{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.bn-ligne li{display:grid;gap:8px;align-content:start;border-top:1.6px solid var(--noir);padding-top:16px}
+.bn-ligne .bn-n{font-size:clamp(48px,5vw,72px);font-weight:500;letter-spacing:-.06em;line-height:.85;color:var(--bleu);transition:transform .5s cubic-bezier(.34,1.56,.64,1);justify-self:start}
+.bn-ligne li:hover .bn-n{transform:translateY(-6px) rotate(-4deg)}
+.bn-ligne b{font-weight:500;font-size:clamp(19px,1.6vw,23px);letter-spacing:-.015em;margin-top:8px}
+.bn-ligne .bn-t{color:#444;font-size:16px;max-width:32ch}
+@media (max-width:900px){.bn-duo,.bn-ligne{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== v13 page signer : panneau « Et ensuite? » ===== */
+.s-panneau{background:var(--bleu);color:#fff;padding:clamp(28px,3.5vw,48px);display:grid;gap:28px}
+.sp-tete{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.sp-tete h2{font-size:clamp(34px,3.4vw,52px);font-weight:500;letter-spacing:-.04em;line-height:1}
+.sp-tete .sceau-xl{width:120px;flex:none;justify-self:auto}
+.sp-tete .sceau-xl>svg circle:first-of-type{fill:#2C27D8}
+.sp-etapes{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.sp-etapes li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding-bottom:28px;position:relative}
+.sp-etapes li:last-child{padding-bottom:0}
+.sp-etapes li:not(:last-child)::before{content:"";position:absolute;left:31px;top:64px;bottom:4px;border-left:1.6px dashed rgba(255,255,255,.55)}
+.sp-n{width:64px;height:64px;border-radius:50%;background:var(--jaune);color:var(--noir);display:grid;place-items:center;font-size:28px;font-weight:500;letter-spacing:-.04em;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.sp-etapes li:hover .sp-n{transform:rotate(-12deg) scale(1.08)}
+.sp-etapes div{display:grid;gap:4px;padding-top:4px}
+.sp-quand{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--jaune)}
+.sp-etapes b{display:block;font-weight:500;font-size:clamp(20px,1.7vw,24px);letter-spacing:-.015em}
+.sp-etapes p{color:rgba(255,255,255,.85);font-size:16px;max-width:38ch}
+.sp-pied{display:flex;flex-wrap:wrap;gap:8px;border-top:1.6px solid rgba(255,255,255,.45);padding-top:20px}
+.sp-pied span{font-size:13.5px;border:1.6px solid rgba(255,255,255,.7);border-radius:999px;padding:6px 12px}
+.s-page .deux-col{align-items:start}
+main>section.s-page{padding-bottom:clamp(64px,8vw,120px)}
