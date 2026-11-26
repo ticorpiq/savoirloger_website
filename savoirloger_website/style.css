@@ -794,3 +794,8 @@ main>section.s-page{padding-bottom:clamp(64px,8vw,120px)}
 @media (max-width:1100px){.acc-tuiles{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media (max-width:600px){.acc-tuiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 .tr-tx .boutons{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}.tr-lien{margin-left:0;text-underline-offset:4px}
+
+/* v16 logo CORPIQ pied */
+.p-corpiq{display:flex;align-items:center;gap:16px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.3);font-size:16px}
+.p-corpiq img{display:block;width:150px;height:auto}
+.p-corpiq a:hover{opacity:.85;text-decoration:none}
