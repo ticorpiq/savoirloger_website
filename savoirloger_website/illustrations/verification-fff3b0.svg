@@ -3,7 +3,7 @@
 [stroke]{vector-effect:non-scaling-stroke}
 
 .balance{animation:balance 7s ease-in-out infinite}@keyframes balance{0%,100%{transform:rotate(-.7deg)}50%{transform:rotate(.7deg)}}
-.scintille{animation:scintille 2.4s ease-in-out infinite}@keyframes scintille{0%,100%{opacity:1}50%{opacity:.45}}
+
 .coche{transform-box:fill-box;transform-origin:center;opacity:0;animation:coche 6s cubic-bezier(.3,1.6,.5,1) infinite}@keyframes coche{0%,6%{opacity:0;transform:scale(.4)}14%,86%{opacity:1;transform:scale(1)}94%,100%{opacity:0;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
 </style>
